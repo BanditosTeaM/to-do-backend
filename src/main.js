@@ -17,8 +17,8 @@ app.use(bodyParser.json())
 
 mongoose.connect(process.env.MONGODB_URL).catch(error => console.log(error))
 
-app.use('/api', folderRouter)
-app.use('/api', taskRouter)
+app.use('/folder', folderRouter)
+app.use('/task', taskRouter)
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}...`)
