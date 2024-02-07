@@ -13,7 +13,7 @@ const PORT = process.env.PORT
 
 app.use(
 	cors({
-		origin: ['https://todo-app-topaz-gamma.vercel.app/'],
+		origin: ['https://todo-app-topaz-gamma.vercel.app'],
 		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 	})
 )
