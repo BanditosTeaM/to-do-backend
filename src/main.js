@@ -14,9 +14,12 @@ const PORT = process.env.PORT
 app.use(
 	cors({
 		origin: ['https://todo-app-topaz-gamma.vercel.app'],
-		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+		preflightContinue: false,
+		optionsSuccessStatus: 200
 	})
 )
+
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
